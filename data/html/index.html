@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="main-container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorkShop</title>
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <p>Points:<span id="points">1</span></p>
+    <br />
+
+    <div id="Mandatory_Choices">
+      <h2>Mandatory Choices</h2>
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div class="switch-button">
+        <input
+          class="switch-button-checkbox"
+          type="checkbox"
+          id="MeleeRanged"
+          value="ranged"
+        />
+        <label class="switch-button-label" for="MeleeRanged">
+          <span class="switch-button-label-span">Melee</span>
+        </label>
+      </div>
+      <div class="content" id="rangedContent">
+        <div class="slidecontainer">
+          <div>
+            <label for="myRange">Range</label>
+            <input
+              type="range"
+              min="20"
+              max="120"
+              step="10"
+              value="20"
+              class="slider"
+              id="weaponRange"
+              oninput="weapon.setRange = parseInt(document.getElementById('weaponRange').value)"
+            />
+          </div>
+          <div class="reload-container">
+            <input type="radio" name="reload" id="reload-1" value="1" class="reload_radio"/>
+            <label for="reload-1"></label>
+            <input type="radio" name="reload" id="reload-2" value="2" class="reload_radio"/>
+            <label for="reload-2"></label>
+            <input type="radio" name="reload" id="reload-3" value="3" class="reload_radio"/>
+            <label for="reload-3"></label>
+          </div>
+          <br />
+          <input
+            type="checkbox"
+            id="Volley"
+            name="Volley"
+            class="property"
+            value="3"
+          />
+          <label for="Volley">Volley</label>
+        </div>
+      </div>
+      <div>
+        <label for="Increased_training">Category</label>
+        <select name="Increased_training" id="Increased_training">
+          <option value="0">Simple</option>
+          <option value="1">Martial</option>
+          <option value="2">Advanced</option>
+        </select>
+      </div>
+      <div>
+        <label for="hands">Hands</label>
+        <select name="hands" id="hands">
+          <option value="0">1</option>
+          <option value="1">1+</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+      <div>
+        <label for="damage_dice">Damage Dice</label>
+        <select name="damage_dice" id="damage_dice">
+          <option value="0">1d4</option>
+          <option value="1">1d6</option>
+          <option value="2">1d8</option>
+          <option value="3">1d10</option>
+          <option value="4">1d12</option>
+        </select>
+      </div>
+      <div>
+        <label for="damage type">Damage Type</label>
+        <select name="damage type" id="damage_type">
+          <option value="Bludgeoning">Bludgeoning</option>
+          <option value="Piersing">Piersing</option>
+          <option value="Slashing">Slashing</option>
+        </select>
+      </div>
+      <div>
+        <input type="checkbox" id="non_lethal" name="Non Lethal" class="property" value="0"/>
+        <label for="non_lethal">Non Lethal</label>
+      </div>
+      <div>
+        <input type="checkbox" id="Expensive" name="Expensive" class="property" value="1"/>
+        <label for="Expensive">Expensive</label>
+      </div>
+      <label for="description">Description</label>
+      <input type="text" id="description" name="description" />
+    </div>
+    <div id="boons_list">
+      <h1>Boons</h1>
+      <p id="boonList">haha</p>
+      <table class="boons" id="boon_list">
+        <tr>
+          <th>Minor</th>
+          <th>Greater</th>
+          <th>Major</th>
+        </tr>
+      </table>
+    </div>
+
+</div>  
+    <script src="../scripts/index.js"></script>
+  </body>
+</html>
